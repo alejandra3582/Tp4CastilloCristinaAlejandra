@@ -1,0 +1,59 @@
+<!-- Modal -->
+<!-- Vertically centered scrollable modal -->
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" [innerHTML]="cuerpo">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+        <h5 class="text-center">ULTIMAS NOTICIAS</h5>
+        <div class="row" >
+          <div class=" card col-sm-6" *ngFor="let item of listaNoticias">
+            
+            <img [src]="item.img" class="card-img-top" alt="" width="18rem">
+              <div class="card-body">
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="mostrarNoticia(item)">Ver</a>
+                <p>
+                  {{item.tit}}
+                </p>
+
+              </div>
+           
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="card col-sm-3">
+        <img src="/assets/imagen/publicidad.png" class="card-img-top" alt="" height="700px">
+        <div class="card-body">
+          <p>
+            Localizador GPS para perros
+          </p>
+
+        </div>
+
+          
+      </div>
+    </div>
+  </div>

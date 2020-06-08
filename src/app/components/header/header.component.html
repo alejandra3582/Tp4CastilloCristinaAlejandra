@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light Menu-foot">
+        <a class="navbar-brand">
+          <img src="/assets/imagen/logo.jpg" height="65px">
+        </a>
+        <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a [routerLink]="['noticias']" class="nav-link">Noticias</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    <a [routerLink]="['divisas']" class="nav-link">Divisas</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    <a [routerLink]="['horoscopo']" class="nav-link">Horoscopo</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    <a [routerLink]="['estadisticas']" class="nav-link">Estadisticas</a>
+
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="desplegable" href="#">
+                        Item
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Usuarios</a>
+                        <a class="dropdown-item">Perfiles</a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    
+
+</div>

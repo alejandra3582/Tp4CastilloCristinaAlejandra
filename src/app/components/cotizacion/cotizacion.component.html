@@ -1,0 +1,179 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+           <div class="table-responsive">
+            <table class="table table-hover">
+                <div class="table-secondary text-center font-weight-bold py-2">Conversor de Divisas</div>
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                    <th scope="col"> <img src="/assets/imagen/united_states_flags.png" width="30px" alt=""> <br> USD</th>
+                    <th scope="col"> <img src="/assets/imagen/spain.png" width="30px" alt=""> <br> EUR</th>
+                    <th scope="col"> <img src="/assets/imagen/united_kingdom.png" width="30px" alt=""> <br> GBP</th>
+                    <th scope="col"> <img src="/assets/imagen/japan.png" width="30px" alt=""> <br> JPY</th>
+                    <th scope="col"> <img src="/assets/imagen/argentina.png" width="30px" alt=""> <br> ARS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"> <img src="/assets/imagen/united_states_flags.png" width="30px" alt=""></th>
+                    <td>
+                         <div>1 USD</div> 
+                         <div>Inverse</div>
+                    </td>
+                    <td> 
+                        <div>1.000000</div> 
+                        <div>1.000000</div>
+                    </td>
+                    <td> 
+                        <div>0.919901</div>
+                        <div>1.087074</div>
+                    </td>
+                    <td>
+                        <div>0.811469</div>
+                        <div>1.232332</div>
+                    </td>
+                    <td>
+                        <div>108.9079</div>
+                        <div>0.009182</div>
+                    </td>
+                    <td>
+                        <div>64.87725</div>
+                        <div>0.015414</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> <img src="/assets/imagen/spain.png" width="30px" alt=""></th>
+                    <td>
+                        <div>1 EUR</div>
+                        <div>Inverse</div>
+                    </td>
+                    <td>
+                        <div>1.087074</div>
+                        <div>0.919901</div>
+                    </td>
+                    <td>
+                        <div>1.000000</div>
+                        <div>1.000000</div>
+                    </td>
+                    <td>
+                        <div>0.882127</div>
+                        <div>1.133623</div>
+                    </td>
+                    <td>
+                        <div>118.3910</div>
+                        <div>0.008447</div>
+                    </td>
+                    <td>
+                        <div>70.52637</div>
+                        <div>0.014179</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> <img src="/assets/imagen/united_kingdom.png" width="30px" alt=""></th>
+                    <td>
+                        <div>1 GBP</div>
+                        <div>Inverse</div>
+                    </td>
+                    <td>
+                        <div>1.232332</div>
+                        <div>0.811469</div>
+                    </td>
+                    <td>
+                        <div>1.133623</div>
+                        <div>0.882127</div>
+                    </td>
+                    <td>
+                        <div>1.000000</div>
+                        <div>1.000000</div>
+                    </td>
+                    <td>
+                        <div>134.2108</div>
+                        <div>0.007451</div>
+                    </td>
+                    <td>
+                        <div>79.95034</div>
+                        <div>0.012508</div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <th scope="row"> <img src="/assets/imagen/russia.png" width="30px" alt=""></th>
+                      <td>
+                          <div>1 RUB</div>
+                          <div>Inverse</div>
+                      </td>
+                      <td>
+                          <div>0.013226</div>
+                          <div>75.61134</div>
+                      </td>
+                      <td>
+                          <div>0.012166</div>
+                          <div>82.19511</div>
+                      </td>
+                      <td>
+                          <div>0.010732</div>
+                          <div>93.17830</div>
+                      </td>
+                      <td>
+                          <div>1.440365</div>
+                          <div>0.694268</div>
+                      </td>
+                      <td>
+                          <div>0.858036</div>
+                          <div>1.165452</div>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+
+           </div>
+            
+        </div>
+        <div class="col-sm-12 col-md-4 table-secondary" >
+            <form>
+                <h5 class="text-center">Conversor de Divisas</h5>
+                <hr>
+                <div class="form-group">
+                    <label for="Input1">Cantidad</label>
+                    <input type="text" class="form-control" id="Input1" placeholder="Cantidad" name="cantidad" [(ngModel)]="cantidad">
+                </div>
+                <div class="form-group">
+                    <label for="controlSelect1">De</label>
+                    <select name="" id="controlSelect1" class="form-control" name="origen" [(ngModel)]="origen">
+                        <option value="USD">USD Dolares EEUU</option>
+                        <option value="ARS">ARS Pesos Argentinos</option>
+                        <option value="EUR">EUR Euro</option>
+                        <option value="GBP">GBP Libra Esterlina</option>
+                        <option value="JPY">JPY Yen Japones</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="controlSelect2">A</label>
+                    <select name="" id="controlSelect2" class="form-control" name="destino" [(ngModel)]="destino">
+                        <option value="ARS">ARS Pesos Argentinos</option>
+                        <option value="EUR">EUR Euro</option>
+                        <option value="USD">USD Dolares EEUU</option>
+                        <option value="GBP">GBP Libra Esterlina</option>
+                        <option value="JPY">JPY Yen Japones</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <textarea name="text" id="" rows="1" class="form-control" name="resultado">{{resultado}}</textarea>
+
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn  btn-block " style="background-color:rgb(249, 252, 101)" name="convertir" (click)="convertir()">Convertir</button>
+                </div>
+                
+
+            </form>
+            
+        </div>
+    </div>
+
+</div>

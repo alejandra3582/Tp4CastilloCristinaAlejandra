@@ -1,0 +1,90 @@
+<div class="container">
+        
+    <div class="row">
+      <div class="col-6 bg-light">
+          <form>
+             <h5 class="text-center">Estadisticas covid</h5>
+             <div class="form-group">
+                <label for="SelectPais">Pais</label>
+                <select class="form-control" id="SelectPais" name="pais" [(ngModel)]="seleccion">
+                  <option value="Argentina">Argentina</option>
+                  <option value="USA">Estados Unidos</option>
+                  <option value="Spain">España</option>
+                  <option value="Italy">Italia</option>
+                  <option value="Germany">Alemania</option>
+                </select>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="confirmados" id="chkConfirmados" [(ngModel)]="confirmados">
+                <label class="form-check-label" for="chkConfirmados">Casos Confirmados</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="curados" id="chkCurados" [(ngModel)]="curados">
+                <label class="form-check-label" for="chkCurados">Curados</label>
+              </div>
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fallecidos" id="chkFallecidos" [(ngModel)]="fallecidos">
+                  <label class="form-check-label" for="chkFallecidos">Fallecidos</label>
+               </div>
+               <br>
+               <button type="submit" class="btn btn-primary" name="boton" (click)="obtenerPais()">Enviar</button>
+          </form>
+      </div>
+      <div class="col-6" *ngIf="buscar">
+          <div>
+              Estadiscas de {{seleccion}}
+          </div>
+          <div class="row" *ngIf="confirmados">
+              <div class="col-12">
+                Confirmados: {{confirmadosInfo}}
+              </div>
+          </div>
+          <div class="row" *ngIf="curados">
+            <div class="col-12">
+                Curados: {{curadosInfo}}
+            </div>
+        </div>
+        <div class="row" *ngIf="fallecidos">
+            <div class="col-12">
+                Fallecidos: {{fallecidosInfo}}
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table text-right">   
+            <thead>
+              <tr>
+                <th class="text-left" scope="col">Ubicacion</th>
+                <th scope="col">Casos Activos</th>
+                <th scope="col">Nuevos Casos</th>
+                <th scope="col">Nuevas Muertes</th>
+                <th scope="col">Total de Casos</th>
+                <th scope="col">Total de Muertes</th>
+                <th>Total Recuperados</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of paises">
+                <td class="text-left">
+                    <img src="/assets/imagen/{{item.nombrePais}}-bandera.jpg" width="40px" alt="">
+                     {{item.nombrePais}}
+                </td>
+                <td>{{item.casosActivos}}</td>
+                <td>{{item.nuevosCasos}}</td>
+                <td>{{item.nuevasMuertes}}</td>
+                <td>{{item.totalCasos}}</td>
+                <td>{{item.totalMuertes}}</td>
+                <td>{{item.totalRecuperados}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+</div>
